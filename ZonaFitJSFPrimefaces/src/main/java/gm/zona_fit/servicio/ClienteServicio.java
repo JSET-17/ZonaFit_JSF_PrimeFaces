@@ -4,7 +4,6 @@ import gm.zona_fit.modelo.Cliente;
 import gm.zona_fit.repositorio.ClienteRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
@@ -20,8 +19,8 @@ public class ClienteServicio implements IClienteServicio{
     }
 
     @Override
-    public Cliente buscarClientePorId(Integer id) {
-        Cliente cliente = clienteRepositorio.findById(id).orElse(null);
+    public Cliente buscarClientePorId(Integer idCliente) {
+        Cliente cliente = clienteRepositorio.findById(idCliente).orElse(null);
         return cliente;
     }
 
